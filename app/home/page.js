@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import ReactPlayer from 'react-player';
+import HomePageVideo from './video.js';
 
 /*
 to-do:
@@ -25,10 +26,7 @@ export default function Home()
             <h1>Hello World</h1>
             <Link href = "/bloximpact">Check out bloximpact</Link>
 
-            <ReactPlayer
-                url = "https://d3ith6uwkonxsg.cloudfront.net/videos/SG-Trailer-[BETA].mp4"
-                controls = {false}
-            />
+            <HomePageVideo/>
 
             <Image
                 alt = "gameplay image 1"
