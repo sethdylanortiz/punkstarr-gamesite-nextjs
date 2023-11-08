@@ -1,0 +1,79 @@
+.videoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #735acc;
+    color: #fff;
+}
+
+.gameTitle{
+    font-size: 72px;
+    background: linear-gradient(to bottom, #c42100, #c22d10, #4a1105);
+    -webkit-text-stroke: 2px black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text{
+    font-size: 25px;
+}
+
+.playNowButton{
+    padding: 20px;
+    cursor: pointer;
+    background-color: #43b32d;
+    border: none;
+    border-radius: 10px;
+    width: max-content;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.gameDescriptionContainer{
+    background-color: #ccc;
+}
+
+.sectionContainer{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 30px;
+}
+
+.imageContainer{
+    flex: 1;
+    display: flex;
+    padding: 75px;
+}
+
+.leftDesc{
+    flex: 1;
+    width: 35%;
+    text-align: left;
+}
+
+.rightDesc{
+    flex: 1;
+    width: 35%;
+    text-align: right;
+}
+
+.itemVideo{
+    flex: 0;
+}
+
+.video{
+    border: none;
+}
+
+.itemDesc{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-align: center;
+    align-items: center;
+}
