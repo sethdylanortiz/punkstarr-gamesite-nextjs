@@ -2,9 +2,12 @@
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #111;
     color: #fff;
+
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .imageContainer{
