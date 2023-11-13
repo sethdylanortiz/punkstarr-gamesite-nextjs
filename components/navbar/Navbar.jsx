@@ -13,10 +13,10 @@ const Navbar = () => {
                     width = {60}
                     height = {60}
                 />
-                <Link href = "/home" className = {styles.logo}>punkstarr</Link>
+                <Link href = "" className = {styles.logo}>punkstarr</Link>
             </div>
             <div className = {styles.linksContainer}>
-                <Link href = "/bloximpact">BloxImpact</Link>
+                <Link href = "/bloximpact">Check out our upcoming games!</Link>
                 <Link href = "https://twitter.com/SGonRoblox" className = {styles.xButton}>Follow us on X!</Link>
             </div>
         </div>

@@ -16,6 +16,7 @@ completed:
 - created aws s3 bucket to hold videos/images media
 - created and connected cloudfront to s3 bucket
 - updated next.config.js for cloudfront integration
+- add client side "report bug" feature/functionality
 */
 
 export default function Home() 
@@ -32,15 +33,14 @@ export default function Home()
                     {/* section - video player + message */}
                     <div className = {styles.videoContainer}>
 
-                        <div className = {styles.itemDesc}>
+                        <div className = {styles.videoDesc}>
                             <h1 className = {styles.nameTitle}>punkstarr</h1>
-                            <p className = {styles.text}>We're an independent Roblox game development studio.</p>
-                            <Link href = "https://www.roblox.com/games/10805907537/SURVIVAL-GAMES-BATTLEPASS" className = {styles.playNowButton}>Play HERE</Link>
+                            <p className = {styles.text}>We're an independent</p>
+                            <p className = {styles.text}>Roblox game development</p>
+                            <p className = {styles.text}>studio.</p>
                         </div>
 
-                        <div className = {styles.itemVideo}>
-                            <video className = {styles.video} autoPlay loop muted src = "https://d3ith6uwkonxsg.cloudfront.net/videos/SG-Trailer-[BETA].mp4"/>
-                        </div>
+                        <video className = {styles.video} autoPlay loop muted src = "https://d3ith6uwkonxsg.cloudfront.net/videos/SG-Trailer-[BETA].mp4"/>
 
                     </div>
                     {/* END - video player */}
@@ -64,7 +64,7 @@ export default function Home()
                                 width = {1200}
                                 height = {500}
                                 style = {{
-                                    maxWidth: '35%',
+                                    maxWidth: '50%',
                                     height: 'auto',
                                 }}
                             />
@@ -91,7 +91,7 @@ export default function Home()
                                 width = {1200}
                                 height = {500}
                                 style = {{
-                                    maxWidth: '35%',
+                                    maxWidth: '50%',
                                     height: 'auto',
                                 }}
                             />
@@ -105,7 +105,7 @@ export default function Home()
                                 width = {1200}
                                 height = {500}
                                 style = {{
-                                    maxWidth: '35%',
+                                    maxWidth: '50%',
                                     height: 'auto',
                                 }}
                             />
@@ -116,6 +116,9 @@ export default function Home()
                                 <p className = {styles.descText}>Gain XP throughout the match to enchant your items</p>
                             </div>
                         </div>
+
+                        <Link href = "https://www.roblox.com/games/10805907537/SURVIVAL-GAMES-BATTLEPASS" className = {styles.playNowButton}>Play HERE</Link>
+
 
                     </div> 
                     {/* END - how to play */}

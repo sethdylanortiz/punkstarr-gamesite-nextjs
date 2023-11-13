@@ -25,9 +25,10 @@
 .xButton{
     padding: 10px;
     border: none;
-    background-color: #735acc;
+    background-color: #fff;
+    color: black;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .logo{
