@@ -2,13 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import styles from './page.module.css';
+import Button from '@/components/button/Button';
 
 /*
 to-do:
 - test against mobile device
-- finish homepage
 - add typescript?
-- run eslint
+- run eslint code quality inspection
+- run e2e testing performance
+- look into making other things be components (------ section headings -----, etc (pass props title))
+- add client side "report bug" feature/functionality
 
 completed:
 - add video
@@ -16,7 +19,6 @@ completed:
 - created aws s3 bucket to hold videos/images media
 - created and connected cloudfront to s3 bucket
 - updated next.config.js for cloudfront integration
-- add client side "report bug" feature/functionality
 */
 
 export default function Home() 
@@ -117,8 +119,7 @@ export default function Home()
                             </div>
                         </div>
 
-                        <Link href = "https://www.roblox.com/games/10805907537/SURVIVAL-GAMES-BATTLEPASS" className = {styles.playNowButton}>Play HERE</Link>
-
+                        <Button text = "Play HERE" url = "https://www.roblox.com/games/10805907537/SURVIVAL-GAMES-BATTLEPASS"/>
 
                     </div> 
                     {/* END - how to play */}
@@ -162,6 +163,31 @@ export default function Home()
 
                     </div> 
                     {/* END - about us */}
+
+                    {/* section - bug report */}
+                    <div className = {styles.bugReport}>
+                        <div className = {styles.sectionHeading}>
+                            <hr className = {styles.lineSeperator}/>
+                            <h3 className = "redText">REPORT A BUG</h3>
+                            <hr className = {styles.lineSeperator}/>
+                        </div>
+
+                        <p className = {styles.welcomeMsg}> Found a bug in our game? </p>
+                        <p className = {styles.welcomeMsg}> Please let us know by filling out the form below describing it and how it happened.</p>
+                    
+                        <form className = {styles.form}>
+                            <input type = "text" placeholder = "roblox username" className = {styles.input}/>
+                            <input type = "text" placeholder = "email" className = {styles.input}/>
+                            <textarea className = {styles.textArea} placeholder = "message" cols = "30" rows = "10"></textarea>
+                        </form>
+                    
+                        {/* move to call/write to aws */}
+                        <Button text = "Submit" url = "#"/>
+                    </div>
+
+
+
+                    {/* END - bug report */}
 
                 </div>
                 {/* END - content container */}
