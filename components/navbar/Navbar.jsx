@@ -16,8 +16,7 @@ const Navbar = () => {
                 <Link href = "" className = {styles.logo}>punkstarr</Link>
             </div>
             <div className = {styles.linksContainer}>
-                <Link href = "/bloximpact">Check out our upcoming games!</Link>
-                <Link href = "https://twitter.com/SGonRoblox" className = {styles.xButton}>Follow us on X!</Link>
+                <Link href = "/contact">Contact Us | Report a Bug</Link>
             </div>
         </div>
     )

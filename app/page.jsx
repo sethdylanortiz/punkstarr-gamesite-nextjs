@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './page.module.css';
 import Button from '@/components/button/Button';
+import punkstarr_logo from '../public/punkstarr_logo.png';
 
 /*
 to-do:
@@ -10,11 +11,11 @@ to-do:
 - add typescript?
 - run eslint code quality inspection
 - run e2e testing performance
-- look into making other things be components (------ section headings -----, etc (pass props title))
-- add client side "report bug" feature/functionality
 
 completed:
 - add video
+- add client side "report bug" feature/functionality 
+- look into making other things be components (------ section headings -----, etc (pass props title))
 - add css via modules.css and globals.css
 - created aws s3 bucket to hold videos/images media
 - created and connected cloudfront to s3 bucket
@@ -27,10 +28,10 @@ export default function Home()
         <div className = {styles.container}>
             
             {/* container holding wallpaper */}
-            <div className = {styles.wallpaper}>
+            <div className = "wallpaper">
 
                 {/* container holding content */}
-                <div className = {styles.contentContainer}>
+                <div className = "contentContainer">
                 
                     {/* section - video player + message */}
                     <div className = {styles.videoContainer}>
@@ -50,13 +51,13 @@ export default function Home()
                     {/* section - how to play imgs + msgs */}
                     <div className = {styles.gameDescriptionContainer}>
 
-                    <div className = {styles.sectionHeading}>
-                            <hr className = {styles.lineSeperator}/>
+                    <div className = "sectionHeading">
+                            <hr className = "lineSeperator"/>
                             <h3 className = "redText">SURVIVAL GAMES</h3>
-                            <hr className = {styles.lineSeperator}/>
+                            <hr className = "lineSeperator"/>
                         </div>
 
-                        <p className = {styles.welcomeMsg}>How to <span className = "redText">PLAY</span> our new BATTLE ROYALE!</p>
+                        <p className = "welcomeMsg">How to <span className = "redText">PLAY</span> our new BATTLE ROYALE!</p>
 
                         <div className = {styles.sectionContainer}>
                             <Image
@@ -127,13 +128,13 @@ export default function Home()
                     {/* section - about punkstarr */}
                     <div className=  {styles.aboutUsContainer}>
 
-                        <div className = {styles.sectionHeading}>
-                            <hr className = {styles.lineSeperator}/>
+                        <div className = "sectionHeading">
+                            <hr className = "lineSeperator"/>
                             <h3 className = "redText">COMMUNITY</h3>
-                            <hr className = {styles.lineSeperator}/>
+                            <hr className = "lineSeperator"/>
                         </div>
 
-                        <p className = {styles.welcomeMsg}>We're creating a <span className = "redText">thriving</span> gaming community on Roblox </p>
+                        <p className = "welcomeMsg">We're creating a <span className = "redText">thriving</span> gaming community on Roblox </p>
 
                         <div className = {styles.playSessionsCard}>
                             <div className = {styles.cardText}>
@@ -165,24 +166,28 @@ export default function Home()
                     {/* END - about us */}
 
                     {/* section - bug report */}
-                    <div className = {styles.bugReport}>
-                        <div className = {styles.sectionHeading}>
-                            <hr className = {styles.lineSeperator}/>
+                    <div className = {styles.contactUs}>
+                        <div className = "sectionHeading">
+                            <hr className = "lineSeperator"/>
                             <h3 className = "redText">REPORT A BUG</h3>
-                            <hr className = {styles.lineSeperator}/>
+                            <hr className = "lineSeperator"/>
                         </div>
 
-                        <p className = {styles.welcomeMsg}> Found a bug in our game? </p>
-                        <p className = {styles.welcomeMsg}> Please let us know by filling out the form below describing it and how it happened.</p>
-                    
-                        <form className = {styles.form}>
-                            <input type = "text" placeholder = "roblox username" className = {styles.input}/>
-                            <input type = "text" placeholder = "email" className = {styles.input}/>
-                            <textarea className = {styles.textArea} placeholder = "message" cols = "30" rows = "10"></textarea>
-                        </form>
-                    
-                        {/* move to call/write to aws */}
-                        <Button text = "Submit" url = "#"/>
+                        <p className = "welcomeMsg"> Found a bug in our game? Contact us!</p>
+
+                        {/* <Image
+                            className = {styles.logoContainer}
+                            alt = "punkstarr_logo.png"
+                            src = {punkstarr_logo}
+                            width = {1200}
+                            height = {200}
+                            style = {{
+                                maxWidth: '15%',
+                                height: 'auto',
+                            }}
+                        /> */}
+
+                        <Button text = "Contact" url = "./contact"/>
                     </div>
 
 
