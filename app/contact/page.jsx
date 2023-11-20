@@ -1,10 +1,11 @@
-"use client";
+// "use client";
 
 import React from 'react';
 import styles from './page.module.css';
 import Button from '@/components/button/Button';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+// import { useState } from 'react';
+// import { useRouter } from 'next/navigation';
+import CreateForm from './CreateForm';
 
 // function used to POST/store bug reports, compare to contact page
 async function writeBugReports({username, msg}) 
@@ -16,42 +17,42 @@ async function writeBugReports({username, msg})
 
 const ContactUs = () => {
     // error handling
-    const [error, setError] = useState(false);
+    // const [error, setError] = useState(false);
 
-    const router = useRouter();
+    // const router = useRouter();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
 
-        // get values
-        const input_username = e.target[0].value;
-        const input_email = e.target[1].value;
-        const input_bug_report = e.target[2].value;
+    //     // get values
+    //     const input_username = e.target[0].value;
+    //     const input_email = e.target[1].value;
+    //     const input_bug_report = e.target[2].value;
 
-        try {
+    //     try {
             
-            const response = await fetch("https://y0pqvwydld.execute-api.us-west-1.amazonaws.com/StoreBugReportDynamoDB", {
-                method: "POST",
-                headers: {
-                    'Access-Control-Allow-Origin': origin || '*',
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    username: input_username,
-                    email: input_email,
-                    reportmsg: input_bug_report
-                })
-            });
+    //         const response = await fetch("https://y0pqvwydld.execute-api.us-west-1.amazonaws.com/StoreBugReportDynamoDB", {
+    //             method: "POST",
+    //             headers: {
+    //                 'Access-Control-Allow-Origin': origin || '*',
+    //                 "Content-Type": "application/json",
+    //             },
+    //             body: JSON.stringify({
+    //                 username: input_username,
+    //                 email: input_email,
+    //                 reportmsg: input_bug_report
+    //             })
+    //         });
 
-            // redirect to success page
-            response.status == 201 && router.push("/")
-        } catch (error) {
-            setError(true);
-        }
-    }
+    //         // redirect to success page
+    //         response.status == 201 && router.push("/")
+    //     } catch (error) {
+    //         setError(true);
+    //     }
+    // }
 
     return (
-        <div className = {styles.Container}>
+        <div className = {styles.container}>
 
             {/* container holding wallpaper */}
             <div className = "wallpaper">
@@ -70,16 +71,17 @@ const ContactUs = () => {
                         <p className = "welcomeMsg"> Found a bug in our game? </p>
                         <p className = "welcomeMsg"> Please let us know by filling out the form below describing it and how it happened.</p>
                     
-                        <form className = {styles.form} onSubmit = {handleSubmit}>
+                        {/* <form className = {styles.form} onSubmit = {handleSubmit}>
                             <input type = "text" placeholder = "roblox username" className = {styles.input} required/>
                             <input type = "text" placeholder = "email" className = {styles.input} required/>
                             <textarea className = {styles.textArea} placeholder = "message" cols = "30" rows = "10" required></textarea>
 
                             <button className = {styles.submitReport}>Submit report</button>
-                        </form>
+                        </form> */}
+                        <CreateForm/>
                     
                         {/* move to call/write to aws */}
-                        <Button text = "Submit" url = "#"/>
+                        {/* <Button text = "Submit" url = "#"/> */}
                     </div>
 
                 </div>

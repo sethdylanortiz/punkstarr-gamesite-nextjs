@@ -175,6 +175,7 @@ export default function Home()
 
                         <p className = "welcomeMsg"> Found a bug in our game? Contact us!</p>
 
+                        <bugReportForm/>
                         {/* <Image
                             className = {styles.logoContainer}
                             alt = "punkstarr_logo.png"

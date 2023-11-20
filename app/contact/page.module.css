@@ -3,6 +3,8 @@
 
     justify-content: center;
     align-items: center;
+
+    height: 100%;
 }
 
 /* bug report  */
@@ -27,6 +29,9 @@
 
     width: 85%;
     padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 .input, .textArea{
@@ -34,6 +39,7 @@
     padding: 20px;
     border: none;
     outline: none;
+    width: 100%;
 
     font-size: 15px;
     font-weight: bold;
@@ -49,5 +55,7 @@
     width: 150px;
     border-radius: 5%;
 
+    margin-top: 20px;
     margin-bottom: 40px;
+    border: none;
 }
