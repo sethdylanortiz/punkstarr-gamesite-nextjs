@@ -16,16 +16,30 @@
 }
 
 .container{
-    position: relative;
+    position: absolute;
 
     justify-content: center;
     align-items: center;
+
+    /* height: 100%; */
 }
 
 /* content, main */
 .contentContainer{
-    width: 95%;
-    margin: auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px;
+
+    background-color: #fff;
+    
+    align-items: center;
+    justify-self: center;
+
+    text-align: center;
 }
 
 /* video container */

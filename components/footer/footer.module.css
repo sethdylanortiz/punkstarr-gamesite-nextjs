@@ -1,13 +1,15 @@
 .container{
-    height: 50px;
+    height: 75px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     background-color: #111;
-    color: #fff;
+    color: #ccc;
 
     padding-left: 5%;
     padding-right: 5%;
+
+    /* position: relative; */
 }
 
 .imageContainer{

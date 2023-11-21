@@ -5,34 +5,15 @@ import styles from './page.module.css';
 import Button from '@/components/button/Button';
 import punkstarr_logo from '../public/punkstarr_logo.png';
 
-/*
-to-do:
-- test against mobile device
-- add typescript?
-- run eslint code quality inspection
-- run e2e testing performance
-
-completed:
-- add video
-- add client side "report bug" feature/functionality 
-- look into making other things be components (------ section headings -----, etc (pass props title))
-- add css via modules.css and globals.css
-- created aws s3 bucket to hold videos/images media
-- created and connected cloudfront to s3 bucket
-- updated next.config.js for cloudfront integration
-*/
-
 export default function Home() 
 {
     return (
         <div className = {styles.container}>
             
-            {/* container holding wallpaper */}
-            <div className = "wallpaper">
-
                 {/* container holding content */}
-                <div className = "contentContainer">
-                
+                {/* <div className = "contentContainer"> */}
+                {/* <div className = {styles.contentContainer}> */}
+
                     {/* section - video player + message */}
                     <div className = {styles.videoContainer}>
 
@@ -51,7 +32,7 @@ export default function Home()
                     {/* section - how to play imgs + msgs */}
                     <div className = {styles.gameDescriptionContainer}>
 
-                    <div className = "sectionHeading">
+                        <div className = "sectionHeading">
                             <hr className = "lineSeperator"/>
                             <h3 className = "redText">SURVIVAL GAMES</h3>
                             <hr className = "lineSeperator"/>
@@ -174,32 +155,14 @@ export default function Home()
                         </div>
 
                         <p className = "welcomeMsg"> Found a bug in our game? Contact us!</p>
-
-                        <bugReportForm/>
-                        {/* <Image
-                            className = {styles.logoContainer}
-                            alt = "punkstarr_logo.png"
-                            src = {punkstarr_logo}
-                            width = {1200}
-                            height = {200}
-                            style = {{
-                                maxWidth: '15%',
-                                height: 'auto',
-                            }}
-                        /> */}
-
                         <Button text = "Contact" url = "./contact"/>
                     </div>
-
-
-
+                    
                     {/* END - bug report */}
 
-                </div>
+                {/* </div> */}
                 {/* END - content container */}
-            
-            </div>
-            {/* END - wallpaper wrapper */}
+        
 
         </div>
         // END - container

@@ -12,43 +12,47 @@ const CreateForm = () => {
     const router = useRouter();
 
     // set states
-    const [username, setUsername] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    // function to handle form submission
     const handleSubmit = async(event) => {
-        // prevents the default action of a page which is to reload
-        event.preventDefault;
 
-        // set isLoading to true after submission
         setIsLoading(true);
+        event.preventDefault();
 
-        // create post params object, item title is from db
-        const bugReport = {
-            username: username,
-            email: email,
-            reportmsg: message
+        const inputData = {
+            username: event.target.input_username.value,
+            email: event.target.input_email.value,
+            reportmsg: event.target.input_message.value 
         }
 
-        // send post request
-        const response = await fetch('https://y0pqvwydld.execute-api.us-west-1.amazonaws.com/StoreBugReportDynamoDB', {
-                method: 'POST',
-                headers: 
-                {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(bugReport)
-            }
-        )
-        console.log("sent post request!");
+        // api call to app router POST dynamodb
+        const response = await fetch("/api/bugreport", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(inputData),
+        });
 
-        // check status and redirect - to home [testing]
+        // await and print resposne from write request
+        const {responseMsg} = await response.json();
+        console.log(responseMsg);
+
+
+
+        // redirect user to new page upon response
         if(response.status == 200){
-            // router.refresh(); // this is if we need a refresh in data [to-add]: section displaying all bug reports
-            router.push('/');
+            console.log("response.status == 200!");
+
+            // router.refresh();
+            router.push("/success");
+
+        }else{
+            // redirect to 404 error page
+            ;
         }
+
+        setIsLoading(false);
     }
 
     return(
@@ -58,18 +62,16 @@ const CreateForm = () => {
             <input type = "text" 
             placeholder = "roblox username" 
             className = {styles.input} 
+            id = "input_username"
             required
-            onChange = {(event) => setUsername(event.target.value)}
-            value = {username}
             />
 
             {/* input submission for email */}
             <input type = "text" 
             placeholder = "email" 
             className = {styles.input} 
+            id = "input_email"
             required
-            onChange = {(event) => setEmail(event.target.value)}
-            value = {email}
             />
 
             {/* input submission for message/bug */}
@@ -77,9 +79,8 @@ const CreateForm = () => {
             placeholder = "message" 
             cols = "30" 
             rows = "10" 
+            id = "input_message"
             required
-            onChange = {(event) => setMessage(event.target.value)}
-            value = {message}
             />
 
             {/* add button */}
