@@ -6,29 +6,31 @@ import styles from "./layout.module.css";
 
 const inter = Inter({ subsets: ['latin'] })
 
-// per app route
 export const metadata = {
   title: 'punkstarr',
   description: 'punkstarr Roblox game development studio - creators of SURVIVAL GAMES Battle Royale',
+  icons:{
+    icon: '../public/favicon(1).ico',
+  },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
 
-      <body className= {inter.className}>
+        <body className= {inter.className}>
 
-        <Navbar/>
+            <div className = {styles.app}>
+                <Navbar/>
 
-        <div className = {styles.container}>
-            {children}
-        </div>
+                <div className = {styles.container}>
+                    {children}
+                </div>
 
-        <Footer/>
+                <Footer/>
+            </div>
 
-        {/* styles.container */}
-
-      </body>
+        </body>
 
     </html>
   )

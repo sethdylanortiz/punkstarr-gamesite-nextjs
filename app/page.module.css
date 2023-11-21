@@ -1,4 +1,17 @@
 
+/* wallpaper */
+.wallpaperContainer{
+    /* position: absolute; */
+
+    background-image: url("../public/punkstarr_logo.png");
+    background-repeat: repeat;
+
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 5%;
+}
+
 /* misc */
 .nameTitle{
     font-size: 72px;
@@ -16,10 +29,16 @@
 }
 
 .container{
-    position: absolute;
+    position: relative;
 
     justify-content: center;
     align-items: center;
+
+    height: 100%;
+    width: 95%;
+
+    /* left: 2.5%;
+    right: 2.5%; */
 
     /* height: 100%; */
 }

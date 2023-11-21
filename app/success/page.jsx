@@ -1,23 +1,12 @@
 import React from 'react';
 import styles from './page.module.css';
 import Button from '@/components/button/Button';
+import Footer from '@/components/footer/Footer';
 
 const SuccessPage = () => {
 
     return (
-        // <div className = {styles.container}>
 
-        //     {/* container holding wallpaper
-        //     <div className = {styles.wallpaper}/> */}
-
-        //     {/* container holding content */}
-
-
-        //     {/* container holding wallpaper
-        //     <div className = {styles.wallpaper}/> */}
-
-        // </div>
-        // // END - styles.Container
         <div className = {styles.contentContainer}>
 
             <p className = "welcomeMsg"> thank you!</p>
@@ -29,6 +18,7 @@ const SuccessPage = () => {
             </div>
 
         </div>
+
     );
 }
 
