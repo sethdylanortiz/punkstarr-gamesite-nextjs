@@ -1,9 +1,18 @@
 
-/* misc */
-.welcomeMsg{
-    font-size: 22px;
+/* wallpaper */
+.wallpaperContainer{
+    /* position: absolute; */
+
+    background-image: url("../public/punkstarr_logo.png");
+    background-repeat: repeat;
+
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 5%;
 }
 
+/* misc */
 .nameTitle{
     font-size: 72px;
     /* background: linear-gradient(to bottom, #c42100, #c22d10, #4a1105); */
@@ -19,37 +28,37 @@
     padding: 75px;
 }
 
-.lineSeperator{
-    flex: 1;
-    border: 0;
-    /* clear: both;
-    display:block; */
-    width: 500px;               
-    background-color: #111;
-    height: 1px;
-}
-
 .container{
     position: relative;
 
     justify-content: center;
     align-items: center;
+
+    height: 100%;
+    width: 95%;
+
+    /* left: 2.5%;
+    right: 2.5%; */
+
+    /* height: 100%; */
 }
 
 /* content, main */
 .contentContainer{
-    width: 95%;
-    margin: auto;
-}
+    width: 100%;
 
-/* wallpaper */
-.wallpaper{
-    background-image: url("../public/punkstarr_logo.png");
-    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-    justify-content: center;
+    padding: 20px;
+
+    background-color: #fff;
+    
     align-items: center;
+    justify-self: center;
 
+    text-align: center;
 }
 
 /* video container */
@@ -127,18 +136,6 @@
     text-align: right;
 }
 
-.playNowButton{
-    background-color: #d94a34;
-    padding: 20px;
-    color: white;
-    font-size: 20px;
-
-    width: 15%;
-    border-radius: 5%;
-
-    margin-bottom: 40px;
-}
-
 /* about us */
 .aboutUsContainer{
     display: flex;
@@ -152,13 +149,6 @@
     justify-self: center;
 
     text-align: center;
-}
-
-.sectionHeading{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
 }
 
 .playSessionsCard{
@@ -189,22 +179,30 @@
     background-color: #EFE8FF;
 
     width: 50%;
-
-
-}
-
-.discordMembersCardTest{
-    flex: 1;
-    background-image: url("../public/punkstarr_logo.png");
-    background-repeat: repeat;
-
-    filter: blur(3px);
-
-    align-items: center;
-    justify-self: center;
 }
 
 .cardText{
     padding: 70px;
     text-align: center;
+}
+
+/* contact us */
+.contactUs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px;
+
+    background-color: #fff;
+    align-items: center;
+    justify-self: center;
+
+    text-align: center;
+}
+
+.logoContainer{
+    display: flex;
+    flex: 1;
+    padding: 5px;
 }

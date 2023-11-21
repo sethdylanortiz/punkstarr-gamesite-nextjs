@@ -1,0 +1,36 @@
+.wallpaperContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.app{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.pageLayout{
+    display: flex;
+    flex-direction: row;
+
+    height: 100vh;
+}
+
+.wallpaper{
+    flex: 0.05;
+    background-image: url("../public/punkstarr_logo.png");
+    background-repeat: repeat;
+}
+
+.content{
+    flex: 0.90;
+    width: 80%;
+    height: 100vh;
+}

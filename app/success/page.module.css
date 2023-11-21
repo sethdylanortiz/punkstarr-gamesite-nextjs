@@ -1,0 +1,42 @@
+.container{
+    align-items: center;
+    justify-self: center;
+}
+
+.wallpaper{
+    flex: 0.05;
+    background-image: url("../../public/punkstarr_logo.png");
+    background-repeat: repeat;
+
+    /* justify-content: center;
+    align-items: center;
+
+    height: 100%; */
+
+    width: 20%;
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+
+    padding: 40px;
+
+    background-color: #fff;
+    
+    align-items: center;
+    justify-self: center;
+
+    text-align: center;
+}
+
+.buttonTable{
+    display: flex;
+    flex-direction: row;
+
+    gap: 20px;
+}
