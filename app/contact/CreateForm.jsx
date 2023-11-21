@@ -51,7 +51,6 @@ const CreateForm = () => {
             // redirect to 404 error page
             ;
         }
-
         setIsLoading(false);
     }
 
@@ -64,6 +63,8 @@ const CreateForm = () => {
             className = {styles.input} 
             id = "input_username"
             required
+
+            data-cy="input_username"
             />
 
             {/* input submission for email */}
@@ -72,6 +73,8 @@ const CreateForm = () => {
             className = {styles.input} 
             id = "input_email"
             required
+
+            data-cy="input_email"
             />
 
             {/* input submission for message/bug */}
@@ -81,10 +84,12 @@ const CreateForm = () => {
             rows = "10" 
             id = "input_message"
             required
+
+            data-cy="input_reportmsg"
             />
 
             {/* add button */}
-            <button className = {styles.submitReport} disabled = {isLoading}>
+            <button className = {styles.submitReport} disabled = {isLoading} data-cy="submit">
                 {isLoading && <span>Submitting...</span>}
                 {!isLoading && <span>Submit</span>}
             </button>
