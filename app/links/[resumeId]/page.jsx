@@ -8,11 +8,13 @@ import logo_linkedin from '../../../public/icon_linkedin.png';
 import logo_punkstarr from '../../../public/punkstarr_logo.png';
 import logo_youtube from '../../../public/icon_youtube.png';
 import logo_twitter from '../../../public/icon_twitter.png';
+import logo_googledocs from '../../../public/icon_googledocs.png';
 
 // to-do: write e2e tests
 const Links = ({params}) => {
 
     let isResumeForEmbeddedCompany = params.resumeId === "for-embedded" ? true : false;
+    let resumeType = params.resumeId == "resume-embedded-software" ? params.resumeId : "resume-non-embedded-software";
 
     return (
         <div className = {styles.contentContainer}>
@@ -43,9 +45,14 @@ const Links = ({params}) => {
             />
 
             {/* testing */}
-            { !isResumeForEmbeddedCompany ? <h1>[ For Non-Embedded Software Engineer Opportunities]</h1> : <h1>For Embedded Software Engineer Opportunities</h1>}
-            { !isResumeForEmbeddedCompany ? 
+            { (resumeType === "resume-non-embedded-software") ? <h1>[For Non-Embedded Software Engineer Opportunities]</h1> : <h1>[For Embedded Software Engineer Opportunities]</h1>}
+            { (resumeType === "resume-non-embedded-software") ? 
                 [
+                    <Directbutton 
+                        directory = {logo_googledocs} 
+                        text = "Non-Embedded Software Engineering resume" 
+                        url = "https://docs.google.com/document/d/1iJekOndaEBsN5qirCMshedbQbqc2LBE3eld7jCExbuI/edit?usp=sharing"
+                    />,
                     <Directbutton
                         directory = {logo_github} 
                         text = "Next.js punkstarr-gamesite | github repository [in progress]" 
@@ -59,6 +66,11 @@ const Links = ({params}) => {
                 ]
                : 
                [
+                    <Directbutton 
+                        directory = {logo_googledocs} 
+                        text = "Embedded Software Engineering resume" 
+                        url = "https://docs.google.com/document/d/1iJekOndaEBsN5qirCMshedbQbqc2LBE3eld7jCExbuI/edit?usp=sharing"
+                    />,
                     <Directbutton 
                         directory = {logo_github} 
                         text = "Other Projects ... BLAH" 

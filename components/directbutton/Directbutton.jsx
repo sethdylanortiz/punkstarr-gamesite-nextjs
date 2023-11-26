@@ -13,11 +13,11 @@ const Directbutton = ({directory, text, url}) => {
                 <Image 
                     src = {directory}
                     alt = "alt logo"
+                    height = {85}
                     width = {80}
-                    height = {75}
                     style = {{
-                        maxWidth: '100%',
-                        height: 'auto',
+                        maxHeight: '100%',
+                        width: 'auto',
                         borderRadius: '20px'
                     }}
                 />
