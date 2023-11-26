@@ -13,7 +13,7 @@ const Navbar = () => {
                     width = {60}
                     height = {60}
                 />
-                <Link href = "" className = {styles.logo}>punkstarr</Link>
+                <Link href = "/" className = {styles.logo}>punkstarr</Link>
             </div>
             <div className = {styles.linksContainer}>
                 <Link href = "/contact">Contact Us | Report a Bug</Link>

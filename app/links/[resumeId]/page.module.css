@@ -1,0 +1,27 @@
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    width: 100%;
+    gap: 20px;
+
+    padding: 40px;
+
+    /* background-color: #fff; */
+    background-image: linear-gradient(#0073de, purple);
+
+    align-items: center;
+    justify-self: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.welcomeMsg{
+    font-size: 25px;
+    color: white;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
