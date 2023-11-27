@@ -37,7 +37,7 @@ a{
 
 /* wallpaper */
 .wallpaper{
-    background-image: url("../public/punkstarr_logo.png");
+    background-image: url("../../public/punkstarr_logo.png");
     background-repeat: repeat;
 
     justify-content: center;

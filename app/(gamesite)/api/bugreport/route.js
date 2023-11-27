@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
-import writeBugDB from "@/app/lib/dynamodb";
+// import writeBugDB from "@/app/lib/dynamodb";
+import writeBugDB from "../../lib/dynamodb";
 
 export async function POST(req) {
 
@@ -12,13 +13,12 @@ export async function POST(req) {
         return NextResponse.json({
             responseMsg: ["route.js - success writing " + username + "'s bug report to dynamoDB!"],
             success: true,
-            status: 200
         });
     }catch(error){
+        console.log("error inside route.js: " + error);
         return NextResponse.json({
             responseMsg: ["route.js - error cannot send message to db"],
-            success: true,
-            status: 500
+            success: false,
         });
     }
 }

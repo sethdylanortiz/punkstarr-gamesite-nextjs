@@ -1,6 +1,6 @@
 .button{
-    width: 80%;
-    height: 120px;
+    width: 75%;
+    height: 100px;
     background-color: #202020;
 
     display: flex;
@@ -9,25 +9,21 @@
     border-radius: 25px;
 
     align-items: center;
-    justify-content: space-evenly;
 
-    gap: 20px;
+    gap: 10px;
+    /* padding: 10px; */
 
-    /* position: relative; */
+    text-decoration: none;
+}
+
+.imageContainer{
+    /* text-align: right; */
+    flex: .10;
 }
 
 .textContainer{
-    flex: 1;
+    flex: .90;
     color: white;
     font-size: 20px;
     text-align: left;
-
-    /* background-color: red; */
-}
-
-
-.imageContainer{
-    text-align: right;
-    flex: .14;
-    /* background-color: blue; */
 }

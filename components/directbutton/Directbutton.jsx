@@ -12,12 +12,12 @@ const Directbutton = ({directory, text, url}) => {
             <div className = {styles.imageContainer}>
                 <Image 
                     src = {directory}
-                    alt = "alt logo"
-                    height = {85}
-                    width = {80}
-                    style = {{
-                        maxHeight: '100%',
-                        width: 'auto',
+                    alt = "alt_logo"
+                    width = "0"
+                    height = "0"
+                    style = {{ 
+                        width: '50%', 
+                        height: 'auto', 
                         borderRadius: '20px'
                     }}
                 />

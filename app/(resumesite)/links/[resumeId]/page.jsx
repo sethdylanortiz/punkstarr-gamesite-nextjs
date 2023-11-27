@@ -3,17 +3,16 @@ import styles from './page.module.css';
 import Directbutton from '@/components/directbutton/Directbutton';
 
 // link logos
-import logo_github from '../../../public/icon_github.png';
-import logo_linkedin from '../../../public/icon_linkedin.png';
-import logo_punkstarr from '../../../public/punkstarr_logo.png';
-import logo_youtube from '../../../public/icon_youtube.png';
-import logo_twitter from '../../../public/icon_twitter.png';
-import logo_googledocs from '../../../public/icon_googledocs.png';
+import logo_github from '../../../../public/icon_github.png';
+import logo_linkedin from '../../../../public/icon_linkedin.png';
+import logo_punkstarr from '../../../../public/punkstarr_logo.png';
+import logo_youtube from '../../../../public/icon_youtube.png';
+import logo_twitter from '../../../../public/icon_twitter.png';
+import logo_googledocs from '../../../../public/icon_googledocs.png';
 
 // to-do: write e2e tests
 const Links = ({params}) => {
 
-    let isResumeForEmbeddedCompany = params.resumeId === "for-embedded" ? true : false;
     let resumeType = params.resumeId == "resume-embedded-software" ? params.resumeId : "resume-non-embedded-software";
 
     return (
@@ -45,7 +44,7 @@ const Links = ({params}) => {
             />
 
             {/* testing */}
-            { (resumeType === "resume-non-embedded-software") ? <h1>[For Non-Embedded Software Engineer Opportunities]</h1> : <h1>[For Embedded Software Engineer Opportunities]</h1>}
+            { (resumeType === "resume-non-embedded-software") ? <h1>[For Non-Embedded Software Opportunities] - using Next.js dynamic routes</h1> : <h1>[For Embedded Software Opportunities]</h1>}
             { (resumeType === "resume-non-embedded-software") ? 
                 [
                     <Directbutton 

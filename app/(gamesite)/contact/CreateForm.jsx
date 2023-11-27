@@ -35,20 +35,19 @@ const CreateForm = () => {
         });
 
         // await and print resposne from write request
-        const {responseMsg} = await response.json();
-        console.log(responseMsg);
-
-
+        const {responseMsg, success} = await response.json();
+        console.log();
 
         // redirect user to new page upon response
-        if(response.status == 200){
-            console.log("response.status == 200!");
+        if(success === true){
+            console.log("CreateForm.jsx - success writing to db!" + "responseMsg: " + responseMsg);
 
             // router.refresh();
             router.push("/success");
 
         }else{
             // redirect to 404 error page
+            console.log("CreateForm.jsx - error writing to db!");
             ;
         }
 

@@ -3,19 +3,6 @@
     justify-self: center;
 }
 
-.wallpaper{
-    flex: 0.05;
-    background-image: url("../../public/punkstarr_logo.png");
-    background-repeat: repeat;
-
-    /* justify-content: center;
-    align-items: center;
-
-    height: 100%; */
-
-    width: 20%;
-}
-
 .contentContainer{
     display: flex;
     flex-direction: column;
