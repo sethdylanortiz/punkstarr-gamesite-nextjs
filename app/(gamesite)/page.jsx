@@ -30,9 +30,9 @@ export default function Home()
                 <div className = {styles.gameDescriptionContainer}>
 
                     <div className = "sectionHeading">
-                        <hr className = "lineSeperator"/>
+                        <hr className = {styles.lineSep}/>
                         <h3 className = "redText">SURVIVAL GAMES</h3>
-                        <hr className = "lineSeperator"/>
+                        <hr className = {styles.lineSep}/>
                     </div>
 
                     <p className = "welcomeMsg">How to <span className = "redText">PLAY</span> our new BATTLE ROYALE!</p>
@@ -107,9 +107,9 @@ export default function Home()
                 <div className=  {styles.aboutUsContainer}>
 
                     <div className = "sectionHeading">
-                        <hr className = "lineSeperator"/>
+                        <hr className = {styles.lineSep}/>
                         <h3 className = "redText">COMMUNITY</h3>
-                        <hr className = "lineSeperator"/>
+                        <hr className = {styles.lineSep}/>
                     </div>
 
                     <p className = "welcomeMsg">We're creating a <span className = "redText">thriving</span> gaming community on Roblox </p>
@@ -146,9 +146,9 @@ export default function Home()
                 {/* section - bug report */}
                 <div className = {styles.contactUs}>
                     <div className = "sectionHeading">
-                        <hr className = "lineSeperator"/>
+                        <hr className = {styles.lineSep}/>
                         <h3 className = "redText">REPORT A BUG</h3>
-                        <hr className = "lineSeperator"/>
+                        <hr className = {styles.lineSep}/>
                     </div>
 
                     <p className = "welcomeMsg"> Found a bug in our game? Contact us!</p>
