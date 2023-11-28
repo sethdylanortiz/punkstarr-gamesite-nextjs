@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './page.module.css';
 import Button from '@/components/button/Button';
-import Footer from '@/components/footer/Footer';
 
 const SuccessPage = () => {
 
