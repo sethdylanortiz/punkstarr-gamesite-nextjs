@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styles from './page.module.css';
 import Directbutton from '@/components/directbutton/Directbutton';
 
@@ -46,7 +46,7 @@ const Links = ({params}) => {
             {/* testing */}
             { (resumeType === "resume-non-embedded-software") ? <h1>[For Non-Embedded Software Opportunities] - using Next.js dynamic routes</h1> : <h1>[For Embedded Software Opportunities]</h1>}
             { (resumeType === "resume-non-embedded-software") ? 
-                [
+                <Fragment>
                     <Directbutton 
                         directory = {logo_googledocs} 
                         text = "Non-Embedded Software Engineering resume" 
@@ -62,9 +62,9 @@ const Links = ({params}) => {
                         text = "Advanced-Data-Structues | [NEXT.JS DYNAMIC ROUTE TESTING]" 
                         url = "https://github.com/sethdylanortiz/punkstarr-gamesite-nextjs"
                     />
-                ]
+                </Fragment>
                : 
-               [
+               <Fragment>
                     <Directbutton 
                         directory = {logo_googledocs} 
                         text = "Embedded Software Engineering resume" 
@@ -75,7 +75,8 @@ const Links = ({params}) => {
                         text = "Other Projects ... BLAH" 
                         url = "https://github.com/sethdylanortiz/Advanced-Data-Structures"
                     /> 
-               ]}
+                </Fragment>
+               }
         </div>
     ); 
 }
