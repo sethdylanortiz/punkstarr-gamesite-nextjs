@@ -18,11 +18,11 @@
 
 .imageContainer{
     /* text-align: right; */
-    flex: .10;
+    flex: .20;
 }
 
 .textContainer{
-    flex: .90;
+    flex: .80;
     color: white;
     font-size: 20px;
     text-align: left;

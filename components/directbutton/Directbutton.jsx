@@ -16,9 +16,12 @@ const Directbutton = ({directory, text, url}) => {
                     width = "0"
                     height = "0"
                     style = {{ 
-                        width: '50%', 
+                        width: '65px',
+                        maxWidth: '65px', 
+                        minWidth: '45px',
+
                         height: 'auto', 
-                        borderRadius: '20px'
+                        borderRadius: '20px',
                     }}
                 />
             </div>

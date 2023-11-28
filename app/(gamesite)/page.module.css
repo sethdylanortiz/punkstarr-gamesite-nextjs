@@ -22,12 +22,6 @@
     font-size: 25px;
 }
 
-.imageContainer{
-    display: flex;
-    flex: 1;
-    padding: 75px;
-}
-
 .container{
     position: relative;
 
@@ -65,31 +59,131 @@
 .videoContainer{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: #735acc;
     color: #fff;
 }
 
 .videoDesc{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    flex: .5;
+    width: 100%;
 
-    text-align: left;
+    /* gap: 5px; */
+
+    text-align: center;
     align-items: center;
     justify-self: center;
+
+    position: relative;
 }
 
 .video{
-    flex: 1;
+    flex: .5;
     border: none;
     height: 100%;
+    width: 100%;
+    position: relative;
 }
 
-.itemVideo{
-    flex: 1;
+@media (max-width: 1100px) {
+
+    .videoContainer{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .videoDesc{
+        /* padding-top: 50px; */
+        padding: 50px;
+    }
+
+
+    .sectionContainer{
+        flex-direction: column;
+        width: 100%;
+    }
+    .imageContainer{
+        width: 100%;
+        padding: 0px;
+    }
+    .gameDescriptionContainer{
+        padding: 0px;
+        width: 100%;
+    }
+
+    .leftDesc{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .rightDesc{
+        width: 100%;
+        text-align: center;
+    }
+
+    .twoCardContainer{
+        flex-direction: column;
+    }
+    .discordMembersCard{
+        flex: 1;
+        background-color: #EFE8FF;
+    
+        width: 100%;
+    }
+    .redTitle{
+        color: #d94a34;
+    }
 }
+
+@media (min-width: 1100px) /*and (max-width: 1024px)*/ {
+
+    .videoContainer{
+        flex-direction: row;
+    }
+
+
+    .sectionContainer{
+        flex-direction: row;
+        width: 90%;
+    }
+    .imageContainer{
+        width: 100%;
+        height: 'auto';
+        padding: 10px;
+    }
+    .gameDescriptionContainer{
+        padding: 20px;
+    }
+
+    .leftDesc{
+        flex: 1;
+        width: 35%;
+        text-align: left;
+    }
+    .rightDesc{
+        flex: 1;
+        width: 35%;
+        text-align: right;
+    }
+
+
+
+
+    .twoCardContainer{
+        flex-direction: row;
+    }
+    .discordMembersCard{
+        flex: 1;
+        background-color: #EFE8FF;
+    
+        width: 50%;
+    }
+    .redTitle{
+        color: #d94a34;
+        font-size: 50px;
+    }
+
+}
+
 
 /* how to play */
 .gameDescriptionContainer{
@@ -97,21 +191,25 @@
     flex-direction: column;
     
     background-color: #EFE8FF;
+    width: 100%;
 
-    padding: 20px;
-    gap: 20px;
+    gap: 40px;
 
     text-align: center;
-
     align-items: center;
+}
 
+
+.imageContainer{
+    display: flex;
+    flex: 1;
 }
 
 .sectionContainer{
     display: flex;
     align-items: center;
     justify-self: center;
-    gap: 0px;
+    gap: 40px;
 }
 
 .itemDesc{
@@ -126,14 +224,10 @@
 
 .leftDesc{
     flex: 1;
-    width: 35%;
-    text-align: left;
 }
 
 .rightDesc{
     flex: 1;
-    width: 35%;
-    text-align: right;
 }
 
 /* about us */
@@ -154,36 +248,32 @@
 .playSessionsCard{
     background-color: #EFE8FF;
     width: 80%;
+    max-width: 80%;
 }
 
 .twoCardContainer{
     display: flex;
-    flex-direction: row;
     gap: 20px;
 
     align-items: center;
     justify-self: center;
 
     width: 80%;
-}
-
-.twitterFollowersCard{
-    flex: 1;
-    background-color: #EFE8FF;
-
-    width: 50%;
+    max-width: 80%;
 }
 
 .discordMembersCard{
     flex: 1;
     background-color: #EFE8FF;
-
-    width: 50%;
 }
 
 .cardText{
     padding: 70px;
     text-align: center;
+}
+
+.redTitle{
+    color: #d94a34;
 }
 
 /* contact us */
