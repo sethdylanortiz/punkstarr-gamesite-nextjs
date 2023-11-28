@@ -51,12 +51,12 @@ const Links = ({params}) => {
                         directory = {logo_googledocs} 
                         text = "Non-Embedded Software Engineering resume" 
                         url = "https://docs.google.com/document/d/1iJekOndaEBsN5qirCMshedbQbqc2LBE3eld7jCExbuI/edit?usp=sharing"
-                    />,
+                    />
                     <Directbutton
                         directory = {logo_github} 
                         text = "Next.js punkstarr-gamesite | github repository [in progress]" 
                         url = "https://github.com/sethdylanortiz/punkstarr-gamesite-nextjs"
-                    />,
+                    />
                     <Directbutton 
                         directory = {logo_github} 
                         text = "Advanced-Data-Structues | [NEXT.JS DYNAMIC ROUTE TESTING]" 
@@ -69,7 +69,7 @@ const Links = ({params}) => {
                         directory = {logo_googledocs} 
                         text = "Embedded Software Engineering resume" 
                         url = "https://docs.google.com/document/d/1iJekOndaEBsN5qirCMshedbQbqc2LBE3eld7jCExbuI/edit?usp=sharing"
-                    />,
+                    />
                     <Directbutton 
                         directory = {logo_github} 
                         text = "Other Projects ... BLAH" 
