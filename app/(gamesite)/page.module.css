@@ -54,6 +54,11 @@
 .videoContainer{
     display: flex;
     align-items: center;
+    justify-self: center;
+
+    text-align: center;
+    
+    
     /* justify-content: space-between; */
     background-color: #735acc;
     color: #fff;
@@ -65,11 +70,10 @@
 
     /* gap: 5px; */
 
-    text-align: center;
     align-items: center;
     justify-self: center;
 
-    position: relative;
+    text-align: center;
 }
 
 .video{
