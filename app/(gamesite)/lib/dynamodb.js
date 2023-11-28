@@ -14,6 +14,8 @@ const docClient = DynamoDBDocumentClient.from(dbClient);
 
 const writeBugDB = async(input_username, input_email, input_message) => {
 
+    console.log("writeBugDB - process.env.TABLE_NAME: " + process.env.TABLE_NAME + ", type: " + typeof process.env.TABLE_NAME);
+
     // get current time
     const cur_time_utc = new Date();
 
