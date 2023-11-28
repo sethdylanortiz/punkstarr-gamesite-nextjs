@@ -42,10 +42,10 @@ export default function Home()
                             className = {styles.imageContainer}
                             alt = "gameplay image 1"
                             src = "https://d3ith6uwkonxsg.cloudfront.net/images/home-gameplay1.jpg"
-                            width = {1200}
-                            height = {500}
+                            width = "200"
+                            height = "100"
                             style = {{
-                                maxWidth: '50%',
+                                width: '100%',
                                 height: 'auto',
                             }}
                         />
@@ -69,10 +69,10 @@ export default function Home()
                             className = {styles.imageContainer}
                             alt = "gameplay image 1"
                             src = "https://d3ith6uwkonxsg.cloudfront.net/images/home-gameplay2.jpg"
-                            width = {1200}
-                            height = {500}
+                            width = "200"
+                            height = "100"
                             style = {{
-                                maxWidth: '50%',
+                                width: '100%',
                                 height: 'auto',
                             }}
                         />
@@ -83,10 +83,10 @@ export default function Home()
                             className = {styles.imageContainer}
                             alt = "gameplay image 1"
                             src = "https://d3ith6uwkonxsg.cloudfront.net/images/home-gameplay4.jpg"
-                            width = {1200}
-                            height = {500}
+                            width = "200"
+                            height = "100"
                             style = {{
-                                maxWidth: '50%',
+                                width: '100%',
                                 height: 'auto',
                             }}
                         />
@@ -116,7 +116,7 @@ export default function Home()
 
                     <div className = {styles.playSessionsCard}>
                         <div className = {styles.cardText}>
-                                    <h2 className = "redTextTitle">100,000+</h2>
+                                    <h2 className = {styles.redTitle}>100,000+</h2>
                                     <p>Play Sessions</p>
                         </div>
                     </div>
@@ -124,16 +124,16 @@ export default function Home()
 
                     <div className = {styles.twoCardContainer}>
 
-                        <div className = {styles.twitterFollowersCard}>
+                        <div className = {styles.discordMembersCard}>
                             <div className = {styles.cardText}>
-                                <h2 className = "redTextTitle">500+</h2>
+                                <h2 className = {styles.redTitle}>500+</h2>
                                 <p>Twitter Followers</p>
                             </div>
                         </div>
 
                         <div className = {styles.discordMembersCard}>
                             <div className = {styles.cardText}>
-                                <h2 className = "redTextTitle">800+</h2>
+                                <h2 className = {styles.redTitle}>800+</h2>
                                 <p>Discord Members</p>
                             </div>
                         </div>
