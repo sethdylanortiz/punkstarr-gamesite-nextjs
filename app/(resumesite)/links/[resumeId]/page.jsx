@@ -58,6 +58,16 @@ const Links = ({params}) => {
                         url = "https://github.com/sethdylanortiz/punkstarr-gamesite-nextjs"
                     />
                     <Directbutton 
+                        directory = {logo_github}
+                        text = "Developer site [next.js] | [in progress]" 
+                        url = "https://github.com/sethdylanortiz/developer_site-nextjs"
+                    />
+                    <Directbutton 
+                        directory = {logo_github}
+                        text = "Issue tracker [next.js] | [in progress]" 
+                        url = "https://github.com/sethdylanortiz/nextjs-issue-tracker"
+                    />
+                    <Directbutton 
                         directory = {logo_github} 
                         text = "Advanced-Data-Structues | [NEXT.JS DYNAMIC ROUTE TESTING]" 
                         url = "https://github.com/sethdylanortiz/punkstarr-gamesite-nextjs"
