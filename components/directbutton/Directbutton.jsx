@@ -1,27 +1,23 @@
-"use client";
-
 import React from 'react';
 import Link from 'next/link';
 import styles from './directbutton.module.css';
 import Image from 'next/image';
 
 const Directbutton = ({directory, text, url}) => {
+
     return (
         <Link href = {url} className = {styles.button}>
-
             <div className = {styles.imageContainer}>
                 <Image 
                     src = {directory}
+                    quality = {75}
                     alt = "alt_logo"
-                    width = "0"
-                    height = "0"
                     style = {{ 
-                        width: '55px',
-                        maxWidth: '55px', 
-                        minWidth: '45px',
+                        borderRadius: '8px',
 
+                        width: '55px',
                         height: 'auto', 
-                        borderRadius: '20px',
+                        maxHeight: "70px",
                     }}
                 />
             </div>
@@ -30,8 +26,7 @@ const Directbutton = ({directory, text, url}) => {
                 {text}
             </div>
         </Link>
-
     )
-}
+};
 
 export default Directbutton
